@@ -121,7 +121,7 @@ $('#signup_a')
 .css('cursor', 'pointer')
 .click(e => {
 e.preventDefault()
-location.href = href = "/member/join.html"
+location.href = href = "/admin/join.html"
 })
 
 $('#signin_a')
@@ -145,7 +145,7 @@ $.ajax({
 	success : d => {
 		
 		if(d === 'SUCCESS') {
-			location.href="grade/register.html"
+			location.href="index.html"
 		}else{
 			alert('다시 로그인 해주세요')
 			location.href = "index.html"

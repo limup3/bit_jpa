@@ -87,4 +87,23 @@ public class UserServiceImpl implements UserService {
 		return list;
 	}
 	
+	
+	
+	@Override
+	public boolean idSearch(String userid) {
+		boolean ok = false;
+		
+		return ok;
+	}
+	@Override
+	public void saveFile(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public List<User> readFile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }

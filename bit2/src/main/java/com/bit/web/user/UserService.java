@@ -18,4 +18,10 @@ public interface UserService {
 
 	public List<User> list();
 
+	public boolean idSearch(String userid);
+	
+	public void saveFile(User user);
+	
+	public List<User> readFile();
+
 }

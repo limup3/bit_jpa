@@ -27,6 +27,7 @@ public class UserController {
 	public Messenger join(@RequestBody User user) {
 		Messenger messenger = null;
 		int count = userService.count();
+		userService.add(user);
 		
 		return (userService.count() == count + 1)? messenger.SUCCESS:messenger.FAIL;
 	}
@@ -64,5 +65,9 @@ public class UserController {
 	return (userService.remove(userid)) ? Messenger.SUCCESS:Messenger.FAIL;
 	}
 	
+	@GetMapping("/idSearch/{userid}")
+	public Messenger idSearch(String userid) {
+		return (userService.idSearch(userid))? Messenger.SUCCESS:Messenger.FAIL; 
+	}
 	
 }

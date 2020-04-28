@@ -86,7 +86,7 @@ footer {
   <label>NAME</label> <br>
   <input id = "name" Type="text"/> <br>
   <label>ID</label> <br>
-  <input id = "userid" Type="text"/><input id="duplicate_button"  type="button" value="중복 확인"/> <br>
+  <input id = "userid" Type="text"/><br>
     <label>PASSWORD</label> <br>
   <input id= "passwd" Type="text"/> <br>
   <label>SSN</label> <br>
@@ -128,13 +128,13 @@ $('#join_button')
 			addr : $('#addr').val()}),
 		dataType : 'json',
 		contentType : 'application/json',
-		success : d => {
-			if(d === 'SUCCESS') {
-				alert(d)
-				location.href ="/member/list.html"
-			}else {
-				
+		success: d =>{
+			if(d === 'SUCCESS'){
+				location.href = 'signin.html'
+			}else{
+				location.href = 'signup.html'
 			}
+				
 		},
 		error : (r,x,e) => {
 			alert(r.status)
@@ -142,6 +142,14 @@ $('#join_button')
 	})
 	
 	})
+	
+/* $('#duplicate_button').click(e => {
+	e.preventDefault()
+	$getJSON('/user/idSearch/' + $(#userid).val() , d => {
+		
+	})
+
+})	 */
 </script>
 </body>
 </html>

@@ -119,6 +119,7 @@ e.preventDefault()
 		dataType : 'json',
 		contentType : 'application/json',
 		success : d => {
+			console.log('LOGIN RESULT :: '+d)
 			if(d.messenger === 'SUCCESS') {
 				sessionStorage.setItem('userid',d.user.userid)
 				location.href ="mypage.html"
