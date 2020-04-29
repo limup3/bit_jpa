@@ -105,7 +105,7 @@ phoneNumber, registerDate */
      $('#tr_1').css({ width: '80%', height: '50px' }).addClass('border_black center')
      $('#menu').css({ width: '80%', height: '50px' }).addClass('border_black center')
      $('#kcdc td').addClass('border_black', 'width_full')
-     $('#login_a').css({color: 'blue', cursor : 'none','text-decoration': underline})
+     $('#login_a').css({color: 'blue', cursor: 'none','text-decoration': 'none'})
      $('#register_a').click(e=>{
          e.preventDefault()
          location.href = ""
@@ -115,7 +115,7 @@ phoneNumber, registerDate */
     	 $.ajax({
     		 url : '/admins',
     		 type : 'post',
-    		 data : Stringify({
+    		 data : JSON.stringify({
     			 name : $('#name').val(),
     			 position : $('#position').val(),
     			 email : $('#email').val(),

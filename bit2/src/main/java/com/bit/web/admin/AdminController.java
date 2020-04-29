@@ -22,7 +22,9 @@ public class AdminController {
 	
 	@PostMapping("")
 	public Messenger post(@RequestBody Admin admin) {
+		System.out.println("1. AdminServiceImpl register");
 		adminService.register(admin);
+		System.out.println("5. AdminServiceImpl register");
 		return Messenger.SUCCESS;
 	}
 	

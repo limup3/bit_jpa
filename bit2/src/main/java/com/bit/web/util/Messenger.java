@@ -1,7 +1,7 @@
 package com.bit.web.util;
 
 public enum Messenger {
-	SUCCESS, FAIL, FILE_READ_ERROR, FILE_WRITE_ERROR;
+	SUCCESS, FAIL, FILE_READ_ERROR, FILE_WRITE_ERROR, FILE_INSERT_ERROR;
 	
 	@Override
 	public String toString() {
