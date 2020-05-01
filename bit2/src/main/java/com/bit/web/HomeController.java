@@ -10,7 +10,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 	@GetMapping("/")
 	public String hello() {
-		return "index.html";
+		return "index";
 	}
-
+	@GetMapping("/home")
+	public String home() {
+		return "user";
+	}
+	
+	@GetMapping("/admin")
+	public String admin() {
+		return "admin";
+	}
 }
