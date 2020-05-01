@@ -1,9 +1,10 @@
 package com.bit.web.admin;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
+@Component //타입처리
 public interface AdminService {
 
 	public void register(Admin admin);

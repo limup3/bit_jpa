@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository // 기능만 정의
 public class UserDaoImpl implements UserDao {
 
 	@Override

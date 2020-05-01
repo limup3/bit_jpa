@@ -84,6 +84,23 @@
         	e.preventDefault()
         	location.href = "admin/register.html"
         })
+        $('#access_Button').click(e=> {
+        	$.ajax({
+        		url : '',
+        		type : '',
+        		data : {},
+        		dataType : 'json',
+        		contentType : 'application/json',
+        		success : d=> {
+        			
+        		},
+        		error : (r,x,e) => {
+        			alert(r.status)
+        		}
+        		
+        		
+        	})
+        })
 
     </script>
 </body>

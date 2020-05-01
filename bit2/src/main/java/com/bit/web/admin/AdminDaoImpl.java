@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.bit.web.util.Data;
 import com.bit.web.util.Messenger;
 
-@Repository
+@Repository // 기능만 정의
 public class AdminDaoImpl implements AdminDao {
 
 	@Override
