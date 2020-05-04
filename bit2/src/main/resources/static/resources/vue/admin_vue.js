@@ -49,9 +49,19 @@
         </tr>
     </table>`
 		},
+		login : () =>{
+			return `<article id="login_box">
+				   	<label>ID </label> <br>
+				   	<input id="userid" type="text"> <br>
+				   	<label>PASSWORD</label><br>
+				   	<input id="passwd" type="text"><br>
+				  </article>`
+		},
+		
 		onCreate : () => {},
 		setContentView : () => {}
 
 	}
+	
 
 //})()

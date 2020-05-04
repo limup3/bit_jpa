@@ -36,22 +36,38 @@ user = (()=>{ // 즉시실행구조 , 모듈패턴
 	        	})
 			 })	
 	        $('#access_Button').click(e=> {
-	        	$.ajax({
-	        		url : '',
-	        		type : '',
-	        		data : {},
-	        		dataType : 'json',
-	        		contentType : 'application/json',
-	        		success : d=> {
-	                	e.preventDefault()
-	                	location.href = "/admin"
-	        		},
-	        		error : (r,x,e) => {
-	        			alert(r.status)
-	        		}
+	        	$('#content').empty()
+	        	$('#content').html(adminVue.login())
+	        	$(`<input type="button"/>`)
+	        	.attr({'value':'로그인'})
+	        	.appendTo('#login_box')
+	        	.click(e => {
+	        		e.preventDefault()
+	        		location.href="/admin"
+//	        		$.ajax({
+//	        			url : ``,
+//	        			type : `post`,
+//	        			data : JSON.stringify({
+//	        				
+//	        			}),
+//	        			dataType : `json`,
+//	        			contentType : `application/json`,
+//	        			success : d=> {
+//	        				location.href = "/admin"
+//	        			},
+//	        			error : (r,x,e) => {
+//	        				alert(r.status)
+//	        			}
+//	        		})
+					
+				})
+				$(`<input type="button"/>`)
+	        	.attr({'value':'취소'})
+	        	.appendTo('#login_box')
+	        	.click(e => {
+	        		e.preventDefault()
 	        		
-	        		
-	        	})
+				})
 	        })
 		}).fail(()=>{
 			alert(WHEN_ERROR)

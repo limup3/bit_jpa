@@ -30,8 +30,8 @@ public class AdminController {
 	
 	@GetMapping("")
 	public List<Admin> list() {
-		adminService.findAll();
-		return null;
+		
+		return adminService.findAll();
 	}
 	
 	@GetMapping("/{employNumber}")
