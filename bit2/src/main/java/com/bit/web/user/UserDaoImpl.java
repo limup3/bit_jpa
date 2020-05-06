@@ -33,7 +33,9 @@ public class UserDaoImpl implements UserDao {
 			String message = "";
 			while((message = reader.readLine()) != null) {
 				list.add(message);
+				
 			}
+			System.out.println(list);
 			reader.close();
 		} catch (Exception e) {
 			System.out.println("파일 출력시 에러 발생");
@@ -59,8 +61,15 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public User selectOne(String userid) {
-		// TODO Auto-generated method stub
-		return null;
+		List<User> list = selectAll();
+		User findUser = null;
+		for(User u : list) {
+			if(userid.equals(u.getUserid())) {
+				findUser = u;
+				break;
+			}
+		}
+		return findUser;
 	}
 
 	@Override

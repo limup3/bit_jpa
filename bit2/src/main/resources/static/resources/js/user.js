@@ -16,6 +16,7 @@ user = (()=>{ // 즉시실행구조 , 모듈패턴
 				$.getScript(admin_vue)
 		).done(()=>{
 			setContentView()
+			
 			$('#register_Button').click(e => {
 				$('#content').empty()
 				$('#content').html(adminVue.join())

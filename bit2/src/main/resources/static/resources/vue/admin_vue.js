@@ -1,5 +1,35 @@
 "use strict"
-	const adminVue =  {
+	var adminVue =  {
+			start : () => {
+				return `<div id="content" style="width: 1200px; height: 500px;margin: 0 auto">
+            		<table id="userData">
+                        <tr>
+                            <td>
+                                <a id="number">No.</a>
+                            </td>
+                            <td>
+                                <a id="userid">아이디</a>
+                            </td>
+                             <td>
+                                <a id="name">이름</a>
+                            </td>
+                           <td>
+                                <a id="ssn">주민번호</a>
+                            </td>
+                            <td>
+                                <a id="email">이메일</a>
+                            </td>
+                            <td>
+                                <a id="phoneNumber">전화번호</a>
+                            </td>
+                            <td>
+                                <a id="registerDate">등록일자</a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+            	</div>`
+			}
 		join : () => {
 			return `<table id="kcdc">
 			<tr>

@@ -53,7 +53,6 @@ public class AdminDaoImpl implements AdminDao {
 		Admin u = null;
 		for (int i = 0; i < list.size(); i++) {
 			u = new Admin();
-			System.out.println(list);
 			String[] arr = list.get(i).split(",");
 			u.setEmployNumber(arr[0]);
 			u.setPasswd(arr[1]);

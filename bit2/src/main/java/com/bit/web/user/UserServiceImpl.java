@@ -39,7 +39,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User findOne(String userid) {
-		// TODO Auto-generated method stub
 		return userDao.selectOne(userid);
 	}
 

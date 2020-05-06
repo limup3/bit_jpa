@@ -38,19 +38,19 @@ public class UserController {
 	}
 	
 	@GetMapping("/{userid}")
-	public User	detail(String userid) {
+	public User	detail(@PathVariable String userid) {
 		return userService.findOne(userid);
 	}
 	
-	@PutMapping("/{userid}")
-	public User update(User user) {
-		return userService.modify(user);
-	}
-	
-	@DeleteMapping("/{userid}")
-	public User delete(User user) {
-		return userService.remove(user);
-	}
+//	@PutMapping("/{userid}")
+//	public User update(User user) {
+//		return userService.modify(user);
+//	}
+//	
+//	@DeleteMapping("/{userid}")
+//	public User delete(User user) {
+//		return userService.remove(user);
+//	}
 	
 	
 	
